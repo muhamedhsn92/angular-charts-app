@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-charts-app"
+    }
+  },
+  "defaultProject": "angular-charts-app",
+  "cli": {
+    "analytics": false
+  }
 }

@@ -1,0 +1,15 @@
+<p>bar-chart works!</p>
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-md-6">
+
+            <div class="chart-wrapper">
+                <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+                    [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType">
+                </canvas>
+            </div>
+        </div>
+    </div>
+</div>
