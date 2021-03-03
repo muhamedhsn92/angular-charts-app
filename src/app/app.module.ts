@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { ChartsModule } from 'ng2-charts';
+import { HttpClientModule } from '@angular/common/http';
+
+import { NgxPermissionsModule } from 'ngx-permissions';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,8 @@ import { ChartsModule } from 'ng2-charts';
   imports: [
     BrowserModule,
     AppRoutingModule,
-
+    NgxPermissionsModule,
+    HttpClientModule,
     ChartsModule
   ],
   providers: [],

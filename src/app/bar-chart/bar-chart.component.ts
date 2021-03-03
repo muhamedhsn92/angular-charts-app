@@ -8,6 +8,9 @@ import { Label } from 'ng2-charts';
   styleUrls: ['./bar-chart.component.scss']
 })
 export class BarChartComponent implements OnInit {
+  mainStyleUlr = 'style.css';
+  customStyleUrl = 'custom.css';
+  materialStyleUrl = 'material.css';
   barChartOptions: ChartOptions = {
     responsive: true,
     title: {
@@ -36,6 +39,20 @@ export class BarChartComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  changeColor(x) {
+    if (x == 'ar') {
+      document.getElementById('body_data').setAttribute('dir', `rtl`);
+      document.getElementById('mainStyle').setAttribute('href', `assets/ar/${this.mainStyleUlr}`);
+      document.getElementById('customStyle').setAttribute('href', `assets/ar/${this.customStyleUrl}`);
+      document.getElementById('materialStyle').setAttribute('href', `assets/ar/${this.materialStyleUrl}`);
+    } else if (x == 'en') {
+      document.getElementById('body_data').setAttribute('dir', `ltr`);
+      document.getElementById('mainStyle').setAttribute('href', `assets/en/${this.mainStyleUlr}`);
+      document.getElementById('customStyle').setAttribute('href', `assets/en/${this.customStyleUrl}`);
+      document.getElementById('materialStyle').setAttribute('href', `assets/en/${this.materialStyleUrl}`);
+    }
   }
 
 }
